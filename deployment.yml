@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:latest
+          image: shilpigoyal729/wisecow:${GITHUB_SHA}
           ports:
             - containerPort: 80
           resources:
@@ -30,5 +30,5 @@ spec:
       volumes:
         - name: website-files
           hostPath:
-            path: /Users/shilpigoyal/data/website
+            path: /data/website  # Local path for your host machine; change it as needed
             type: DirectoryOrCreate
